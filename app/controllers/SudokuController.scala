@@ -10,7 +10,7 @@ object SudokuController {
 
 
   def index(level:Int=1) = Action {
-    val (solution,puzzle) = SudokuGenerator.createPuzzle(level)
+    val (solution,puzzle) = SudokuGenerator.createPuzzle(level%3)
     Ok(views.html.sudoku.index(puzzle))
   }
 }
