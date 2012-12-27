@@ -1,0 +1,15 @@
+@(puzzle:List[List[Char]])
+
+@main("Sudoku"){
+
+	<textfield />
+	<table border="1">
+		@puzzle.map {row =>
+		<tr>
+		   @row.map { cell => 
+		   <td>@cell</td>
+		   }
+		</tr>
+		}
+	</table>
+}
