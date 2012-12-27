@@ -27,3 +27,25 @@ tr:nth-child(9) > td {
 .sudoku-class {
 	margin-left: 20%;
 }
+
+header > h2 {
+	width: 100%
+	text-align: right;
+}
+
+#choices-nav, ul {
+	list-style-type: none;
+}
+
+.choices-nav > li{
+	float: left;
+	padding-left: 10px;
+	
+}
+
+li > a {
+	text-decoration: none;
+	padding .2em 1em;
+	color: #000000;
+	font-size: 2em;
+}
