@@ -23,3 +23,7 @@ tr:nth-child(3n+1) > td {
 tr:nth-child(9) > td {
 	border-bottom: thick solid #000000;
 }
+
+.sudoku-class {
+	margin-left: 20%;
+}

@@ -2,14 +2,15 @@
 
 @main("Sudoku"){
 
-	<textfield />
-	<table border="1">
-		@puzzle.map {row =>
-		<tr>
-		   @row.map { cell => 
-		   <td>@cell</td>
-		   }
-		</tr>
-		}
-	</table>
+	<div id="soduku-section">
+		<table border="1">
+			@puzzle.map {row =>
+			<tr>
+			   @row.map { cell => 
+			   <td>@cell</td>
+			   }
+			</tr>
+			}
+		</table>
+	</div>
 }
