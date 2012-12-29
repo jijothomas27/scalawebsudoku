@@ -1,7 +1,44 @@
-@(message: String)
-
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
-}
+@(title: String)
+<!DOCTYPE html>
+<html lang="en" ng-app id="ng-app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" 
+			type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/angular.min.js")" 
+			type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/sudoku.js")" 
+			type="text/javascript"></script>
+		<link href="@routes.Assets.at("stylesheets/main.css")" rel="stylesheet">
+		<link href="@routes.Assets.at("stylesheets/bootstrap.css")" rel="stylesheet">
+	</head>
+	<body ng-controller="SudokuController">
+		<div class="container-narrow">
+			<div class="masthead">
+				<ul class="nav nav-pills pull-right">
+					<li class="{{getSelectedClass(0)}}"><a ng-click="setLevel(0)">Easy</a></li>
+					<li class="{{getSelectedClass(1)}}"><a ng-click="setLevel(1)">Medium</a></li>
+					<li class="{{getSelectedClass(2)}}"><a ng-click="setLevel(2)">Hard</a></li>
+				</ul>
+				<h3 class="muted">Sudoku</h3>
+			</div>
+			
+			<hr />
+			
+			<div class="sudoku-container">
+				<table class="table">
+					<tr ng-repeat="row in puzzle">
+						<td ng-repeat="cell in row" contenteditable="{{isEditable(cell)}}">
+							{{getCellContent(cell)}}
+						</td>
+					</tr>
+				<table>
+			</div>
+			<div class="debug-view">
+				{{puzzle | json }}
+			</div>
+		</div>
+	</body>
+</html>

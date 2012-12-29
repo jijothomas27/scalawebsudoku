@@ -6,7 +6,7 @@ import play.api.mvc._
 object Application extends Controller {
   
   def index = Action {
-    Redirect(routes.SudokuController.index(0))
+    Ok(views.html.index("Hi"))
   }
   
 }

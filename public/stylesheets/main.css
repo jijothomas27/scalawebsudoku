@@ -1,11 +1,31 @@
-table {
-	border-collapse:collapse;
+body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+}
+      
+.container-narrow {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.container-narrow > hr {
+        margin: 30px 0;
+}
+
+.sudoku-container {
+	margin: 0 100px auto;
+}
+      
+li > a {
+	color: #000000;
+	font-size: 1.25em;
 }
 
 td {
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	text-align: center;
+	border: thin solid #000000;
 }
 
 td:nth-child(3n+1) {
@@ -22,30 +42,4 @@ tr:nth-child(3n+1) > td {
 
 tr:nth-child(9) > td {
 	border-bottom: thick solid #000000;
-}
-
-.sudoku-class {
-	margin-left: 20%;
-}
-
-header > h2 {
-	width: 100%
-	text-align: right;
-}
-
-#choices-nav, ul {
-	list-style-type: none;
-}
-
-.choices-nav > li{
-	float: left;
-	padding-left: 10px;
-	
-}
-
-li > a {
-	text-decoration: none;
-	padding .2em 1em;
-	color: #000000;
-	font-size: 2em;
 }
