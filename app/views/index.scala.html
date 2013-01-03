@@ -28,13 +28,19 @@
 			<hr />
 			
 			<div class="sudoku-container">
-				<table class="table">
-					<tr ng-repeat="row in puzzle">
-						<td ng-repeat="cell in row" contenteditable="{{isEditable(cell)}}">
-							{{getCellContent(cell)}}
+				<table id="sudoku-table">
+					<tr id="row-{{$index}}" ng-repeat="row in puzzle">
+						<td id="col-{{$index}}" ng-repeat="cell in row">
+							<input type="text" class="sudoku-answer" style="border-style: none" value="{{cell}}"></input>
 						</td>
 					</tr>
-				<table>
+				</table>
+				<div class="pull-right">
+					<button type="submit" class="btn btn-primary" ng-click="checkSomething()">Submit</button>
+				</div>
+			</div>
+			<div>
+				{{puzzle || json }}
 			</div>
 			
 		</div>

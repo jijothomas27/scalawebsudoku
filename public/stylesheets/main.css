@@ -43,3 +43,9 @@ tr:nth-child(3n+1) > td {
 tr:nth-child(9) > td {
 	border-bottom: thick solid #000000;
 }
+
+.sudoku-answer {
+	width: 20px;
+	height: 20px;
+	border-style: none;
+}
